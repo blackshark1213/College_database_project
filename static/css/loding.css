@@ -1,0 +1,21 @@
+.loading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    width: 100px;
+    height: 100px;
+}
+.loading-circle {
+    border: 8px solid #f3f3f3; /* Light gray border */
+    border-top: 8px solid #0b74bb; /* Blue rotating element */
+    border-radius: 50%;
+    width: 100%; /* Match container size */
+    height: 100%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

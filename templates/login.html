@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+  <!--ring div starts here-->
+<div class="ring">
+  <i style="--clr:#00ff0a;"></i>
+  <i style="--clr:#ff0057;"></i>
+  <i style="--clr:#fffd44;"></i>
+  <div class="login">
+    <h2>SQL Login</h2>
+
+      <form class = "grid" action="/Signin" method="POST">
+        <div class="inputBx">
+          {% if Error %}
+          <h3  style = "color : red">Username Password<br> not found !</h3>
+          {% endif %}
+        </div>
+    <div class="inputBx">
+      <input type="text" id="Username" name="Username" placeholder="Username" required>
+    </div>
+    <div class="inputBx">
+      <input type="password" id="password" name="password" placeholder="Password" required>
+    </div>
+    <div class="inputBx">
+      <input type="submit" id = 'Signin' class ="login_page" value="Sign in">
+    </div>
+
+    
+      </form>
+  </div>
+</div>
+<!--ring div ends here-->
+</body>
+</html>
